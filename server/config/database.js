@@ -5,9 +5,9 @@ require('dotenv').config(); // for environment variables
 const connection = {
   host: process.env.DB_HOST || 'localhost',
   port: process.env.DB_PORT || 5433,
-  database: process.env.DB_NAME || 'my_database',
+  database: process.env.DB_NAME || 'jubeliodb',
   user: process.env.DB_USER || 'postgres',
-  password: process.env.DB_PASSWORD || 'password',
+  password: process.env.DB_PASSWORD || 'password'
 };
 
 const db = pgp(connection);
