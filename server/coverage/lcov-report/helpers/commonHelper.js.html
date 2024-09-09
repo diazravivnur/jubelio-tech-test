@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">89.47% </span>
+                <span class="strong">36.84% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/19</span>
+                <span class='fraction'>7/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/5</span>
+                <span class='fraction'>0/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.44% </span>
+                <span class="strong">38.88% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/18</span>
+                <span class='fraction'>7/18</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -121,28 +121,28 @@
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -174,29 +174,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Pino = require('pino');
 const logger = Pino();
 &nbsp;
-const log = (tags, data) =&gt; {
-  const logs = { tags };
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (data) {
-    Object.assign(logs, { data });
+const log = <span class="fstat-no" title="function not covered" >(t</span>ags, data) =&gt; {
+  const logs = <span class="cstat-no" title="statement not covered" >{ tags };</span>
+<span class="cstat-no" title="statement not covered" >  if (data) {</span>
+<span class="cstat-no" title="statement not covered" >    Object.assign(logs, { data });</span>
   }
 &nbsp;
-  logger.info(logs);
+<span class="cstat-no" title="statement not covered" >  logger.info(logs);</span>
 };
 &nbsp;
-const responseSuccess = (h, req, status, statusMessage, timeStart, data) =&gt; {
-  const timeDiff = process.hrtime(timeStart);
-  const timeTaken = Math.round((timeDiff[0] * 1e9 + timeDiff[1]) / 1e6);
-  const requestInfo = {
+const responseSuccess = <span class="fstat-no" title="function not covered" >(h</span>, req, status, statusMessage, timeStart, data) =&gt; {
+  const timeDiff = <span class="cstat-no" title="statement not covered" >process.hrtime(timeStart);</span>
+  const timeTaken = <span class="cstat-no" title="statement not covered" >Math.round((timeDiff[0] * 1e9 + timeDiff[1]) / 1e6);</span>
+  const requestInfo = <span class="cstat-no" title="statement not covered" >{</span>
     method: req.method.toUpperCase(),
     url: req.url.href,
     headers: req.headers,
     payload: req.payload, // Data sent with the request (if any)
   };
-  log(['INFO', 'Request Info'], { requestInfo });
+<span class="cstat-no" title="statement not covered" >  log(['INFO', 'Request Info'], { requestInfo });</span>
 &nbsp;
-  log(['INFO', 'Response Info'], { responseHeaders: h.response().headers, status, statusMessage, timeTaken});
+<span class="cstat-no" title="statement not covered" >  log(['INFO', 'Response Info'], { responseHeaders: h.response().headers, status, statusMessage, timeTaken});</span>
 &nbsp;
-  return h
+<span class="cstat-no" title="statement not covered" >  return h</span>
     .response({
       status: statusMessage,
       data
@@ -232,7 +232,7 @@ module.exports = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-09-07T15:55:16.200Z
+                at 2024-09-08T14:14:33.881Z
             </div>
         <script src="../prettify.js"></script>
         <script>

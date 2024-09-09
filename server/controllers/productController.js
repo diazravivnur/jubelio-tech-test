@@ -1,6 +1,7 @@
 const CommonHelper = require('../helpers/commonHelper');
 const AxiosHelper = require('../helpers/axiosHelper');
 const DatabaseHelper = require('../helpers/dbHelpers');
+const _ = require('lodash');
 
 // Get all products
 const importProducts = async (req, h) => {
@@ -18,10 +19,15 @@ const importProducts = async (req, h) => {
 const getAllProducts = async (req, h) => {
   const timeStart = process.hrtime();
 
+  const page = parseInt(req.query.page, 10) || 1;
+  const limit = parseInt(req.query.limit, 10) || 8;
+  const offset = (page - 1) * limit;
+
   try {
     const products = await DatabaseHelper.getProducts();
-    console.log(products[0])
-    return CommonHelper.responseSuccess(h, req, 200, 'Success Fetch Data From DB', timeStart, products);
+    const paginatedProducts = products.slice(offset, offset + limit);
+
+    return CommonHelper.responseSuccess(h, req, 200, 'Success Fetch Data From DB', timeStart, paginatedProducts);
   } catch (error) {
     CommonHelper.log(['ERROR', 'getAllProducts', 'productController.js'], { message: `${error}` });
     return CommonHelper.errorResponse(h, error.status, error.message);
@@ -81,7 +87,6 @@ const getProductDetails = async (req, h) => {
     return CommonHelper.errorResponse(h, error.status, error.message);
   }
 };
-
 
 module.exports = {
   importProducts,

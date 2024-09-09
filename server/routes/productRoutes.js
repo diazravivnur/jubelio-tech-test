@@ -1,24 +1,24 @@
 const productController = require('../controllers/productController');
-const validationHelper = require('../helpers/validationHelper')
+const validationHelper = require('../helpers/validationHelper');
 module.exports = [
   {
     method: 'GET',
-    path: '/import-product',
+    path: '/api/v1/import-product',
     handler: productController.importProducts
   },
   {
     method: 'GET',
-    path: '/products',
+    path: '/api/v1/products',
     handler: productController.getAllProducts
   },
   {
     method: 'GET',
-    path: '/products/{id}',
+    path: '/api/v1/products/{id}',
     handler: productController.getProductDetails
   },
   {
     method: 'PUT',
-    path: '/products/{id}',
+    path: '/api/v1/products/{id}',
     handler: productController.updateProduct,
     options: {
       validate: {
@@ -29,13 +29,12 @@ module.exports = [
   },
   {
     method: 'DELETE',
-    path: '/products/{id}',
+    path: '/api/v1/products/{id}',
     handler: productController.deleteProduct
   },
   {
     method: 'POST',
-    path: '/products',
+    path: '/api/v1/products',
     handler: productController.insertProduct
-  },
-  
+  }
 ];

@@ -17,12 +17,12 @@ beforeAll(async () => {
   });
 
   server.route([
-    { method: 'GET', path: '/products', handler: productController.getAllProducts },
-    { method: 'POST', path: '/products/import', handler: productController.importProducts },
-    { method: 'PUT', path: '/products/{id}', handler: productController.updateProduct },
-    { method: 'DELETE', path: '/products/{id}', handler: productController.deleteProduct },
-    { method: 'POST', path: '/products', handler: productController.insertProduct },
-    { method: 'GET', path: '/products/{id}', handler: productController.getProductDetails },
+    { method: 'GET', path: '/api/v1/products', handler: productController.getAllProducts },
+    { method: 'POST', path: '/api/v1/products/import', handler: productController.importProducts },
+    { method: 'PUT', path: '/api/v1/products/{id}', handler: productController.updateProduct },
+    { method: 'DELETE', path: '/api/v1/products/{id}', handler: productController.deleteProduct },
+    { method: 'POST', path: '/api/v1/products', handler: productController.insertProduct },
+    { method: 'GET', path: '/api/v1/products/{id}', handler: productController.getProductDetails },
   ]);
 });
 

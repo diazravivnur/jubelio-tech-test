@@ -3,8 +3,15 @@ const productRoutes = require('./routes/productRoutes');
 
 const init = async () => {
   const server = Hapi.server({
-    port: 3000,
-    host: 'localhost'
+    port: 8080,
+    host: 'localhost',
+    routes: {
+      cors: {
+        origin: ['*'],
+        headers: ['Accept', 'Content-Type'],
+        additionalHeaders: ['X-Requested-With']
+      }
+    }
   });
 
   server.route(productRoutes);
