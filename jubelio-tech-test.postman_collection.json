@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "761f3abe-616d-4c11-b5b4-4723e9f0f992",
+		"name": "jubelio-tech-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15453907",
+		"_collection_link": "https://red-sunset-592017.postman.co/workspace/loocale~77505dd3-7858-41e1-9169-0ba85a7372b6/collection/15453907-761f3abe-616d-4c11-b5b4-4723e9f0f992?action=share&source=collection_link&creator=15453907"
+	},
+	"item": [
+		{
+			"name": "import & fetch products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcl9uYW1lIjoiYWN6c2QiLCJlbWFpbCI6ImRpYXpyYXZpdm56eEBnbWFpbC5jb20iLCJmdWxsX25hbWUiOiJkaWF6c3giLCJ0aHVtYm5haWwiOm51bGwsInBob25lX251bWJlciI6IiIsInVzZXJfcm9sZSI6bnVsbCwiaWF0IjoxNzI1NDc2NDc5fQ.eIep4VXXI7ZgWdT7qlGDknqcUlpR39PtV-xomDdnLhQ"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/import-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"import-product"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:5000/api/loocale/user' \\\r\n--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcl9uYW1lIjoiYWN6c2QiLCJlbWFpbCI6ImRpYXpyYXZpdm56eEBnbWFpbC5jb20iLCJmdWxsX25hbWUiOiJkaWF6c3giLCJ0aHVtYm5haWwiOm51bGwsInBob25lX251bWJlciI6IiIsInVzZXJfcm9sZSI6bnVsbCwiaWF0IjoxNzI1NDc2NDc5fQ.eIep4VXXI7ZgWdT7qlGDknqcUlpR39PtV-xomDdnLhQ'"
+			},
+			"response": []
+		},
+		{
+			"name": "get from db",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcl9uYW1lIjoiYWN6c2QiLCJlbWFpbCI6ImRpYXpyYXZpdm56eEBnbWFpbC5jb20iLCJmdWxsX25hbWUiOiJkaWF6c3giLCJ0aHVtYm5haWwiOm51bGwsInBob25lX251bWJlciI6IiIsInVzZXJfcm9sZSI6bnVsbCwiaWF0IjoxNzI1NDc2NDc5fQ.eIep4VXXI7ZgWdT7qlGDknqcUlpR39PtV-xomDdnLhQ"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/products?page=3&limit=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3"
+						},
+						{
+							"key": "limit",
+							"value": "8"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:5000/api/loocale/user' \\\r\n--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcl9uYW1lIjoiYWN6c2QiLCJlbWFpbCI6ImRpYXpyYXZpdm56eEBnbWFpbC5jb20iLCJmdWxsX25hbWUiOiJkaWF6c3giLCJ0aHVtYm5haWwiOm51bGwsInBob25lX251bWJlciI6IiIsInVzZXJfcm9sZSI6bnVsbCwiaWF0IjoxNzI1NDc2NDc5fQ.eIep4VXXI7ZgWdT7qlGDknqcUlpR39PtV-xomDdnLhQ'"
+			},
+			"response": [
+				{
+					"name": "get from db",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcl9uYW1lIjoiYWN6c2QiLCJlbWFpbCI6ImRpYXpyYXZpdm56eEBnbWFpbC5jb20iLCJmdWxsX25hbWUiOiJkaWF6c3giLCJ0aHVtYm5haWwiOm51bGwsInBob25lX251bWJlciI6IiIsInVzZXJfcm9sZSI6bnVsbCwiaWF0IjoxNzI1NDc2NDc5fQ.eIep4VXXI7ZgWdT7qlGDknqcUlpR39PtV-xomDdnLhQ"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "origin,accept-encoding"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Sep 2024 14:28:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Success Fetch Data From DB\",\n    \"data\": [\n        {\n            \"id\": 22,\n            \"title\": \"Dog Food\",\n            \"price\": \"10.99\",\n            \"sku\": \"A6QRCH37\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Dog%20Food/thumbnail.png\",\n            \"description\": \"Specially formulated dog food designed to provide essential nutrients for your canine companion.\"\n        },\n        {\n            \"id\": 23,\n            \"title\": \"Eggs\",\n            \"price\": \"2.99\",\n            \"sku\": \"YA617RI7\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Eggs/thumbnail.png\",\n            \"description\": \"Fresh eggs, a versatile ingredient for baking, cooking, or breakfast.\"\n        },\n        {\n            \"id\": 24,\n            \"title\": \"Fish Steak\",\n            \"price\": \"14.99\",\n            \"sku\": \"XNIH1MTA\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Fish%20Steak/thumbnail.png\",\n            \"description\": \"Quality fish steak, suitable for grilling, baking, or pan-searing.\"\n        },\n        {\n            \"id\": 13,\n            \"title\": \"Bedside Table African Cherry\",\n            \"price\": \"299.99\",\n            \"sku\": \"OWPLTZYX\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Cherry/thumbnail.png\",\n            \"description\": \"The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance.\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Essence Mascara Lash Princess\",\n            \"price\": \"9.99\",\n            \"sku\": \"RCH45Q1A\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png\",\n            \"description\": \"The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.\"\n        },\n        {\n            \"id\": 26,\n            \"title\": \"Green Chili Pepper\",\n            \"price\": \"0.99\",\n            \"sku\": \"Y4RM3JCB\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Green%20Chili%20Pepper/thumbnail.png\",\n            \"description\": \"Spicy green chili pepper, ideal for adding heat to your favorite recipes.\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Red Nail Polish\",\n            \"price\": \"8.99\",\n            \"sku\": \"YUIIIP4W\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png\",\n            \"description\": \"The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Powder Canister\",\n            \"price\": \"14.99\",\n            \"sku\": \"9EN8WLT2\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png\",\n            \"description\": \"The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.\"\n        },\n        {\n            \"id\": 18,\n            \"title\": \"Cat Food\",\n            \"price\": \"8.99\",\n            \"sku\": \"C3F8QN6O\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Cat%20Food/thumbnail.png\",\n            \"description\": \"Nutritious cat food formulated to meet the dietary needs of your feline friend.\"\n        },\n        {\n            \"id\": 19,\n            \"title\": \"Chicken Meat\",\n            \"price\": \"9.99\",\n            \"sku\": \"G5YEHW7B\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Chicken%20Meat/thumbnail.png\",\n            \"description\": \"Fresh and tender chicken meat, suitable for various culinary preparations.\"\n        },\n        {\n            \"id\": 27,\n            \"title\": \"Honey Jar\",\n            \"price\": \"6.99\",\n            \"sku\": \"BTBNIIOU\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Honey%20Jar/thumbnail.png\",\n            \"description\": \"Pure and natural honey in a convenient jar, perfect for sweetening beverages or drizzling over food.\"\n        },\n        {\n            \"id\": 28,\n            \"title\": \"Ice Cream\",\n            \"price\": \"5.49\",\n            \"sku\": \"VEZMU1EQ\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Ice%20Cream/thumbnail.png\",\n            \"description\": \"Creamy and delicious ice cream, available in various flavors for a delightful treat.\"\n        },\n        {\n            \"id\": 29,\n            \"title\": \"Juice\",\n            \"price\": \"3.99\",\n            \"sku\": \"M2K19S06\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Juice/thumbnail.png\",\n            \"description\": \"Refreshing fruit juice, packed with vitamins and great for staying hydrated.\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Red Lipstick\",\n            \"price\": \"12.99\",\n            \"sku\": \"O5IF1NTA\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png\",\n            \"description\": \"The Red Lipstick is a classic and bold choice for adding a pop of color to your lips. With a creamy and pigmented formula, it provides a vibrant and long-lasting finish.\"\n        },\n        {\n            \"id\": 20,\n            \"title\": \"Cooking Oil\",\n            \"price\": \"4.99\",\n            \"sku\": \"Q6ZP1UY8\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/thumbnail.png\",\n            \"description\": \"Versatile cooking oil suitable for frying, sautéing, and various culinary applications.\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Calvin Klein CK One\",\n            \"price\": \"49.99\",\n            \"sku\": \"DZM2JQZE\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/thumbnail.png\",\n            \"description\": \"CK One by Calvin Klein is a classic unisex fragrance, known for its fresh and clean scent. It's a versatile fragrance suitable for everyday wear.\"\n        },\n        {\n            \"id\": 11,\n            \"title\": \"Annibale Colombo Bed\",\n            \"price\": \"1899.99\",\n            \"sku\": \"4KMDTZWF\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/thumbnail.png\",\n            \"description\": \"The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom.\"\n        },\n        {\n            \"id\": 21,\n            \"title\": \"Cucumber\",\n            \"price\": \"1.49\",\n            \"sku\": \"6KGF2K6Z\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Cucumber/thumbnail.png\",\n            \"description\": \"Crisp and hydrating cucumbers, ideal for salads, snacks, or as a refreshing side.\"\n        },\n        {\n            \"id\": 30,\n            \"title\": \"Kiwi\",\n            \"price\": \"2.49\",\n            \"sku\": \"0X3NORB9\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Kiwi/thumbnail.png\",\n            \"description\": \"Nutrient-rich kiwi, perfect for snacking or adding a tropical twist to your dishes.\"\n        },\n        {\n            \"id\": 31,\n            \"title\": \"NEW PRODUCTS\",\n            \"price\": \"2499.99\",\n            \"sku\": \"LUU95CQP\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png\",\n            \"description\": \"The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.\"\n        },\n        {\n            \"id\": 14,\n            \"title\": \"Knoll Saarinen Executive Conference Chair\",\n            \"price\": \"499.99\",\n            \"sku\": \"RKHVJ4FE\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/thumbnail.png\",\n            \"description\": \"The Knoll Saarinen Executive Conference Chair is a modern and ergonomic chair, perfect for your office or conference room with its timeless design.\"\n        },\n        {\n            \"id\": 15,\n            \"title\": \"Wooden Bathroom Sink With Mirror\",\n            \"price\": \"799.99\",\n            \"sku\": \"7OLTIEVO\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/thumbnail.png\",\n            \"description\": \"The Wooden Bathroom Sink with Mirror is a unique and stylish addition to your bathroom, featuring a wooden sink countertop and a matching mirror.\"\n        },\n        {\n            \"id\": 17,\n            \"title\": \"Beef Steak\",\n            \"price\": \"12.99\",\n            \"sku\": \"BWWA2MSO\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Beef%20Steak/thumbnail.png\",\n            \"description\": \"High-quality beef steak, great for grilling or cooking to your preferred level of doneness.\"\n        },\n        {\n            \"id\": 25,\n            \"title\": \"Green Bell Pepper\",\n            \"price\": \"1.29\",\n            \"sku\": \"HU7S7VQ0\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/groceries/Green%20Bell%20Pepper/thumbnail.png\",\n            \"description\": \"Fresh and vibrant green bell pepper, perfect for adding color and flavor to your dishes.\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Eyeshadow Palette with Mirror\",\n            \"price\": \"19.99\",\n            \"sku\": \"MVCFH27F\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png\",\n            \"description\": \"The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Chanel Coco Noir Eau De\",\n            \"price\": \"129.99\",\n            \"sku\": \"K71HBCGS\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/thumbnail.png\",\n            \"description\": \"Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood. Perfect for evening occasions.\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Dolce Shine Eau de\",\n            \"price\": \"69.99\",\n            \"sku\": \"1NBFK980\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/thumbnail.png\",\n            \"description\": \"Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods. It's a joyful and youthful scent.\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"Dior J'adore\",\n            \"price\": \"89.99\",\n            \"sku\": \"E70NB03B\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/thumbnail.png\",\n            \"description\": \"J'adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine. It embodies femininity and sophistication.\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"Gucci Bloom Eau de\",\n            \"price\": \"79.99\",\n            \"sku\": \"FFKZ6HOF\",\n            \"image\": \"https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/thumbnail.png\",\n            \"description\": \"Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper. It's a modern and romantic scent.\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "create products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"NEW PRODUCTS 2\",\r\n  \"price\": 2499.99,\r\n  \"sku\": \"LUU95CQP\",\r\n  \"image\": \"https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png\",\r\n  \"description\": \"The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3000/products \\\r\n-H \"Content-Type: application/json\" \\\r\n-d '{\r\n  \"title\": \"Annibale Colombo Sofa\",\r\n  \"price\": 2499.99,\r\n  \"sku\": \"LUU95CQP\",\r\n  \"image\": \"https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png\",\r\n  \"description\": \"The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.\"\r\n}'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "update products",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Annibale Colombo Sofa Updated\",\r\n  \"price\": 2599.99,\r\n  \"sku\": \"LUU95CQP\",\r\n  \"image\": \"https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png\",\r\n  \"description\": \"The updated Annibale Colombo Sofa is now even more luxurious with enhanced comfort features and the latest in upholstery.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/products/41a290e87c083bfd495ea900948f13fb:9986cc635cef44f306601dd8f845f14a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"41a290e87c083bfd495ea900948f13fb:9986cc635cef44f306601dd8f845f14a"
+					]
+				},
+				"description": "Generated from cURL: curl -X PUT http://localhost:3000/products/12 \\\r\n-H \"Content-Type: application/json\" \\\r\n-d '{\r\n  \"id\": 12,\r\n  \"title\": \"Annibale Colombo Sofa Updated\",\r\n  \"price\": 2599.99,\r\n  \"sku\": \"LUU95CQP\",\r\n  \"image\": \"https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png\",\r\n  \"description\": \"The updated Annibale Colombo Sofa is now even more luxurious with enhanced comfort features and the latest in upholstery.\"\r\n}'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "delete products",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/products/41a290e87c083bfd495ea900948f13fb:9986cc635cef44f306601dd8f845f14a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"41a290e87c083bfd495ea900948f13fb:9986cc635cef44f306601dd8f845f14a"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE http://localhost:3000/products/12 \\\r\n-H \"Content-Type: application/json\"\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "get detail products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/products/7c0e736ba1945e050be4a205e852d91d:df5c72e45529bb41e8c80972c3799f77",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"7c0e736ba1945e050be4a205e852d91d:df5c72e45529bb41e8c80972c3799f77"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE http://localhost:3000/products/12 \\\r\n-H \"Content-Type: application/json\"\r\n"
+			},
+			"response": []
+		}
+	]
+}
