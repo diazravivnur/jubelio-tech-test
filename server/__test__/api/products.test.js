@@ -30,7 +30,6 @@ afterAll(async () => {
   await server.stop();
 });
 
-// Test for getAllProducts
 describe('GET /products', () => {
   it('should return all products from the database', async () => {
     const mockProducts = [{ id: 1, name: 'Product 1' }, { id: 2, name: 'Product 2' }];
@@ -46,7 +45,6 @@ describe('GET /products', () => {
   });
 });
 
-// Test for importProducts
 describe('POST /products/import', () => {
   it('should fetch and insert products successfully', async () => {
     const mockProducts = [{ id: 1, name: 'Product 1' }];
@@ -63,7 +61,6 @@ describe('POST /products/import', () => {
   });
 });
 
-// Test for updateProduct
 describe('PUT /products/{id}', () => {
   it('should update the product successfully', async () => {
     const productId = 1;
@@ -81,7 +78,6 @@ describe('PUT /products/{id}', () => {
   });
 });
 
-// Test for deleteProduct
 describe('DELETE /products/{id}', () => {
   it('should delete the product successfully', async () => {
     const productId = 1;

@@ -6,7 +6,8 @@ const AddProductModal = ({ onClose, onAdd }) => {
     title: '',
     description: '',
     price: '',
-    image: ''
+    image: '',
+    sku: ''
   });
 
   const handleChange = (e) => {
@@ -22,7 +23,7 @@ const AddProductModal = ({ onClose, onAdd }) => {
       try {
         await onAdd(newProduct);
         alert('Product successfully added!');
-        onClose(); 
+        onClose();
       } catch (error) {
         console.error('Error adding product:', error);
         alert('An unexpected error occurred. Please try again later.');
@@ -33,42 +34,29 @@ const AddProductModal = ({ onClose, onAdd }) => {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>×</button>
+        <button className="modal-close" onClick={onClose}>
+          ×
+        </button>
         <h2>Add New Product</h2>
         <label>
           Title:
-          <input
-            type="text"
-            name="title"
-            value={newProduct.title}
-            onChange={handleChange}
-          />
+          <input type="text" name="title" value={newProduct.title} onChange={handleChange} />
         </label>
         <label>
           Description:
-          <textarea
-            name="description"
-            value={newProduct.description}
-            onChange={handleChange}
-          />
+          <textarea name="description" value={newProduct.description} onChange={handleChange} />
         </label>
         <label>
           Price:
-          <input
-            type="string"
-            name="price"
-            value={newProduct.price}
-            onChange={handleChange}
-          />
+          <input type="string" name="price" value={newProduct.price} onChange={handleChange} />
         </label>
         <label>
           Image URL:
-          <input
-            type="text"
-            name="image"
-            value={newProduct.image}
-            onChange={handleChange}
-          />
+          <input type="text" name="image" value={newProduct.image} onChange={handleChange} />
+        </label>
+        <label>
+          sku:
+          <input type="text" name="sku" value={newProduct.sku} onChange={handleChange} />
         </label>
         <button className="modal-save" onClick={handleSave}>
           Save

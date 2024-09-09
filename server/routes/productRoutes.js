@@ -23,7 +23,7 @@ module.exports = [
     options: {
       validate: {
         params: validationHelper.productIdSchema,
-        payload: validationHelper.productUpdateSchema
+        payload: validationHelper.productSchema
       }
     }
   },

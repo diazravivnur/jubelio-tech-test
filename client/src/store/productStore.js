@@ -31,9 +31,9 @@ const useProductStore = create((set) => ({
       console.error('Error adding product:', error);
     }
   },
-  updateProduct: async (updatedProduct) => {
+  updateProduct: async (updatedProduct, id) => {
     try {
-      await axios.put(`${apiUrl}/${updatedProduct.id}`, updatedProduct);
+      await axios.put(`${apiUrl}/${id}`, updatedProduct);
       set((state) => ({
         products: state.products.map((product) => (product.id === updatedProduct.id ? { ...product, ...updatedProduct } : product))
       }));

@@ -32,10 +32,10 @@ function HomePage() {
     }
   };
 
-  const handleUpdate = async (updatedProduct) => {
+  const handleUpdate = async (updatedProduct, id) => {
     if (updatedProduct) {
       try {
-        await updateProduct(updatedProduct);
+        await updateProduct(updatedProduct, id);
         alert('Product successfully updated!');
       } catch (error) {
         if (error.response && error.response.status === 400) {

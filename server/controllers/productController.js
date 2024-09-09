@@ -24,10 +24,16 @@ const getAllProducts = async (req, h) => {
   const offset = (page - 1) * limit;
 
   try {
-    const products = await DatabaseHelper.getProducts();
-    const paginatedProducts = products.slice(offset, offset + limit);
+    const dataFromDB = await DatabaseHelper.getProducts();
+    const paginatedProducts = dataFromDB.slice(offset, offset + limit);
+    const response = paginatedProducts.map((item) => {
+      return {
+        ...item,
+        id: CommonHelper.encryptId(item.id.toString())
+      };
+    });
 
-    return CommonHelper.responseSuccess(h, req, 200, 'Success Fetch Data From DB', timeStart, paginatedProducts);
+    return CommonHelper.responseSuccess(h, req, 200, 'Success Fetch Data From DB', timeStart, response);
   } catch (error) {
     CommonHelper.log(['ERROR', 'getAllProducts', 'productController.js'], { message: `${error}` });
     return CommonHelper.errorResponse(h, error.status, error.message);
@@ -37,7 +43,7 @@ const getAllProducts = async (req, h) => {
 const updateProduct = async (req, h) => {
   const timeStart = process.hrtime();
   try {
-    const productId = req.params.id;
+    const productId = CommonHelper.decryptId(req.params.id);
     const productData = req.payload;
     await DatabaseHelper.updateProduct(productId, productData);
     return CommonHelper.responseSuccess(h, req, 200, 'Product Updated Successfully', timeStart);
@@ -50,7 +56,7 @@ const updateProduct = async (req, h) => {
 const deleteProduct = async (req, h) => {
   const timeStart = process.hrtime();
   try {
-    const productId = req.params.id;
+    const productId = CommonHelper.decryptId(req.params.id);
     await DatabaseHelper.deleteProduct(productId);
     return CommonHelper.responseSuccess(h, req, 200, 'Product Deleted Successfully', timeStart);
   } catch (error) {
@@ -73,8 +79,7 @@ const insertProduct = async (req, h) => {
 
 const getProductDetails = async (req, h) => {
   const timeStart = process.hrtime();
-  const productId = req.params.id;
-
+  const productId = CommonHelper.decryptId(req.params.id);
   try {
     const result = await DatabaseHelper.getProductDetails(productId);
     if (result.success) {

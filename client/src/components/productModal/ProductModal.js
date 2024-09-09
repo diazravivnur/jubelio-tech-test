@@ -14,15 +14,15 @@ const ProductModal = ({ product, onClose, onDelete, onUpdate }) => {
 
   const handleDelete = () => {
     if (onDelete) {
-      onDelete(product.id); // Call handleDelete passed as a prop
+      onDelete(product.id);
     }
   };
 
   const handleSave = async () => {
     if (onUpdate && editProduct) {
       try {
-        await onUpdate(editProduct);
-        onClose(); // Close the modal after successful update
+        await onUpdate(editProduct, editProduct.id);
+        onClose();
       } catch (error) {
         console.error('Error updating product:', error);
       }
