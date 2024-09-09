@@ -1,4 +1,4 @@
-const db = require('../config/database'); // Make sure you have the correct path for your DB connection
+const db = require('../config/database'); 
 const CommonHelper = require('../helpers/commonHelper');
 
 const insertProducts = async (products) => {

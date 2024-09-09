@@ -3,7 +3,6 @@ const AxiosHelper = require('../helpers/axiosHelper');
 const DatabaseHelper = require('../helpers/dbHelpers');
 const _ = require('lodash');
 
-// Get all products
 const importProducts = async (req, h) => {
   const timeStart = process.hrtime();
   try {
@@ -85,7 +84,7 @@ const getProductDetails = async (req, h) => {
     if (result.success) {
       return CommonHelper.responseSuccess(h, req, 200, 'Product details fetched successfully', timeStart, result.data);
     } else {
-      return h.response({ message: result.message }).code(404); // Product not found
+      return h.response({ message: result.message }).code(404); 
     }
   } catch (error) {
     CommonHelper.log(['ERROR', 'getProductDetails', 'productController.js'], { message: `${error}` });
